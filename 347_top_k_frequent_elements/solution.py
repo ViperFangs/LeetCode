@@ -30,7 +30,10 @@ class Solution:
         # use value(which stores the count) of each key as the index for the 2d frequency list, and append the key to the list at that index
         for key, val in hashmap.items():
             frequency[val].append(key)
-        # loop through the frequency list in backwards order, as the highest count will be at the end of the list
+        """
+        loop through the frequency list in backwards order, as the highest count will be at the end of the list
+        loop till the first element because the 0th index is not going to be populated.
+        """
         for i in range(len(frequency) - 1, 0, -1):
             # loop through each element at the current index if the list has elements
             for n in frequency[i]:
