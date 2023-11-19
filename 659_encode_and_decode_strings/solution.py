@@ -16,12 +16,13 @@ class Solution:
         # loop through the list of string
         for s in strs:
             """
-            add encoding data to the string and append to the result string
-            e.g. "leet" will be changed to "4#leet". "abcdefghijk" will be encoded to "11#abcdefghijk"
-                the number signifies the length of the string and the # sign is used a delimiter
-                the decode function can use information this for decoding the string
+            add encoding data to the string and append it to the result string
+            e.g. "leet" will be encoded to "4#leet". "abcdefghijk" will be encoded to "11#abcdefghijk"
+                the number before the string signifies the length of the string and the "#" is used a delimiter
+                the decode function can use this encoding information for decoding the string
             """
             result += str(len(s)) + "#" + s
+        # return the encoded string
         return result
             
     """
@@ -31,7 +32,7 @@ class Solution:
     def decode(self, str):
         # initialize i to 0 (start of the string)
         i = 0
-        # initialize an empty list which will store the decoded strings
+        # initialize an empty list which will store all the decoded strings
         result = []
         # create a loop till the end of the string
         while i < len(str):
@@ -47,6 +48,7 @@ class Solution:
             """
             i will be at the start of the length and j will be at the "#" at this point
             we can make a substring from i and j and convert it into an int to get the length of the string after the "#"
+                note: creating a substring excludes the last value, therefore "#" will not be present in the substring
             e.g. "11#abcdefghijk" i will be at the initial "1" and j will be at the "#",
                 creating a substring(slice) from i's position to j's position will return "11" which is the length of "abcdefghijk"
             """
@@ -59,8 +61,8 @@ class Solution:
             # create a slice from i's position to j's position and add that to the result list
             result.append(str[i: j])
             """
-            set i to the end of the string, this will make i go to the start of the next string
-            e.g. "4#leet11#abcdefghijk", after appending the string "leet" to the list, i will be set to "1"
+            set i to the start of the next string, which will be the first value of the length variable
+            e.g. "4#leet11#abcdefghijk", after appending the string "leet" to the list, i's postion will be set to "1"
                 this will be used to find the length of the next string and will repeat until the end of the string length 
             """
             i = j
