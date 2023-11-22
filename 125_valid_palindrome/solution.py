@@ -12,10 +12,10 @@ class Solution:
         r = len(s) - 1
         # loop through the string until the left pointer becomes greater than the right pointer 
         while l < r:
-            # if the current character at the left pointer is not an alphanumeric then increment the left pointer
+            # while the current character at the left pointer is not an alphanumeric then increment the left pointer
             while l < r and not s[l].isalnum():
                 l += 1
-            # if the current character at the right pointer is not an alphanumeric then decrement the right pointer
+            # while the current character at the right pointer is not an alphanumeric then decrement the right pointer
             while r > l and not s[r].isalnum():
                 r -= 1
             # if the character at the left pointer is not the same as the character at the right pointer then return False
