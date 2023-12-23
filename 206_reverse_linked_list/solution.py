@@ -10,7 +10,7 @@ class ListNode:
         self.val = val
         self.next = next
 class Solution:
-    def reverseList(self, head: [ListNode]) -> [ListNode]:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         # Define the previous and next nodes as None
         previous_node, next_node = None, None
         # Loop through the linked list
