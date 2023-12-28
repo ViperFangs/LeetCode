@@ -10,7 +10,7 @@ Description: You have a browser of one tab where you start on the homepage and y
             Return the current url after forwarding in history at most steps.
 Space Complexity: O(n), the algorithm uses a doubly linked list to do the operations
 Logic: The logic here is to use a doubly linked list to store the next and previous browser pages visited.
-    Note: There is another solution that uses a list which is faster for some operations.
+    Note: There is another solution that uses a list which is faster for backward and forward operations.
 """
 # BrowserNode stores the url, next and previous values
 class BrowserNode:
@@ -20,26 +20,25 @@ class BrowserNode:
         self.prev = prev
 # BrowserHistory keeps track of a pointer to navigate through the history
 class BrowserHistory:
+    # Time Complexity: O(1)
     def __init__(self, homepage: str):
         self.current = BrowserNode(homepage)
-
+    # Time Complexity: O(1)
     def visit(self, url: str) -> None:
         new_node = BrowserNode(url, None, self.current)
         self.current.next = new_node
         self.current = self.current.next
-
+    # Time Complexity: O(n)
     def back(self, steps: int) -> str:
         while steps > 0 and self.current.prev is not None:
             steps -= 1
             self.current = self.current.prev
-
         return self.current.val
-
+    # Time Complexity: O(n)
     def forward(self, steps: int) -> str:
         while steps > 0 and self.current.next is not None:
             steps -= 1
             self.current = self.current.next
-
         return self.current.val     
 
 # Your BrowserHistory object will be instantiated and called as such:
