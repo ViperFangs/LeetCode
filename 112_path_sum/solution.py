@@ -6,22 +6,15 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
-        path = []
-        return self.canReachLeaf(root, path, targetSum)
-        
-    def canReachLeaf(self, root: TreeNode, path: List[int], target: int) -> bool:
+      def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         if not root:
             return False
 
-        path.append(root.val)
+        if not root.left and not root.right and targetSum - root.val == 0:
+            return True
+        if self.hasPathSum(root.left, targetSum - root.val):
+            return True
+        if self.hasPathSum(root.right, targetSum - root.val):
+            return True
 
-        if not root.left and not root.right and sum(path) == target:
-            return True
-        if self.canReachLeaf(root.left, path, target):
-            return True
-        if self.canReachLeaf(root.right, path, target):
-            return True
-        
-        path.pop()
         return False
