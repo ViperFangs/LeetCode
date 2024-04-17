@@ -1,3 +1,14 @@
+"""
+Author: Aarya
+Description: Given the root of a binary tree and an integer targetSum, 
+    return true if the tree has a root-to-leaf path 
+    such that adding up all the values along the path equals targetSum.
+    Note: A leaf is a node with no children.
+Time Complexity: O(n), where n is the amount of variables in the tree. 
+    Backtracking solutions generally have the time complexity of O(n)
+    This is because in the worst case, the solution will go through all the variables.
+"""
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
