@@ -1,6 +1,10 @@
 """ 
 Author: Aarya
-Description: 
+Description: You are given an m x n integer matrix matrix with the following two properties:
+    Each row is sorted in non-decreasing order.
+    The first integer of each row is greater than the last integer of the previous row.
+  Given an integer target, return true if target is in matrix or false otherwise.
+  You must write a solution in O(log(m * n)) time complexity.
 Time Complexity: O(log(M * N)), where M is the size of the row and N is the size of the columns
 Space Complexity: O(1), we only use a few integers which don't grow with the size of the input 
 Logic: The logic here is to perform a binary search but the twist is to convert a 1d index into a 2d index
