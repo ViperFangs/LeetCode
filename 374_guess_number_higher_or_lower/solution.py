@@ -6,7 +6,7 @@ Description: We are playing the Guess Game. The game is as follows:
   You call a pre-defined API int guess(int num). Return the number that I picked.
 Time Complexity: O(log(n)), This approach uses a binary search algorithm which takes log(n) time.
 Space Complexity: O(1), This approach uses a few pointers to keep track of the guess. Doesn't grow with the input.
-Logic: 
+Logic: Use binary search to find the number picked by the API.
 """
 
 # The guess API is already defined for you.
