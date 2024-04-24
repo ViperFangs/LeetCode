@@ -13,7 +13,21 @@ Logic:
   Recursive: Recursively call the same method on the right or left subtree depending on the root's value and target value.
 """
 
+# This class defines a method `searchBST` that recursively searches for a node with a specific value in a binary search tree.
 class Recursive:
+    """
+    This function searches for a specific value in a binary search tree and returns the node
+    containing that value if found.
+    
+    :param root: The `root` parameter in the `searchBST` function represents the root node of a
+    binary search tree (BST) from which we want to search for a specific value.
+
+    :param val: The `val` parameter in the `searchBST` function represents the value that we are
+    searching for in the binary search tree (BST).
+
+    :return: The function returns either the node with the value equal to the given `val`, or `None` 
+    if the node with the value `val` is not found in the binary search tree.
+    """
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         if not root:
             return None
@@ -25,7 +39,21 @@ class Recursive:
         else:
             return self.searchBST(root.left, val)
         
+# The class contains a method `searchBST` that iteratively searches for a node with a specific value in a binary search tree.
 class Iterative:
+    """
+    This function searches for a specific value in a binary search tree and returns the node
+    containing that value if found.
+    
+    :param root: The `root` parameter in the `searchBST` function represents the root node of a
+    binary search tree (BST) from which we want to search for a specific value.
+
+    :param val: The `val` parameter in the `searchBST` function represents the value that we are
+    searching for in the binary search tree (BST).
+
+    :return: The function returns either the node with the value equal to the given `val`, or `None` 
+    if the node with the value `val` is not found in the binary search tree.
+    """
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         while root:
             if root.val == val:
