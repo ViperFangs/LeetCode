@@ -4,6 +4,7 @@ Description: Given an array of integers nums and an integer target, return indic
     You may assume that each input would have exactly one solution, and you may not use the same element twice.
     You can return the answer in any order.
 Time Complexity: O(n) as we only loop through the list once
+Space Complexity: O(n) as the algorithm uses a hashmap that can grow with the input
 """
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
