@@ -5,12 +5,9 @@ Description: Given an array of distinct integers candidates and a target integer
   You may return the combinations in any order.
   The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the 
   frequency of at least one of the chosen numbers is different.
-Time Complexity: O(n), where n is the amount of variables in the tree. 
-    Backtracking solutions generally have the time complexity of O(n)
-    This is because in the worst case, the solution will go through all the variables.
-Space Complexity: O(n), where n is the amount of variables in the tree. 
-    Backtracking solutions generally have the space complexity of O(n)
-    This is because in the worst case, the solution will go through all the variables.
+Time Complexity: O(2^t), where t is the target value. 
+  The solution uses a backtracking algorithm where the height of the stack tree will be 2^t.
+Space Complexity: O(2^t), same reasoning as time complexity. 
 """
 
 # This class provides a method that finds all unique combinations of candidates
