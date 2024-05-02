@@ -7,6 +7,9 @@ Description: Given the root of a binary tree and an integer targetSum,
 Time Complexity: O(n), where n is the amount of variables in the tree. 
     Backtracking solutions generally have the time complexity of O(n)
     This is because in the worst case, the solution will go through all the variables.
+Space Complexity: O(n), where n is the amount of variables in the tree. 
+    Backtracking solutions generally have the space complexity of O(n)
+    This is because in the worst case, the solution will go through all the variables.
 """
 
 # Definition for a binary tree node.
