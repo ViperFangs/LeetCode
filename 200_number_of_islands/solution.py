@@ -1,3 +1,15 @@
+"""
+Author: Aarya
+Description: Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
+  An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.
+  You may assume all four edges of the grid are all surrounded by water.
+Time Complexity: O(m * n), where M is the number of rows and N is the number of columns in the grid.
+  This complexity arises because each cell in the grid is visited exactly once. 
+Space Complexity: O(m * n), in the worst case, the space complexity reaches O(M * N), which is determined by the size of the call stack.
+  This worst-case scenario occurs when the grid is filled entirely with '1's, 
+  leading to the maximum depth of the recursive call stack equaling the number of elements in the grid.
+"""
+
 # This class implements a solution to count the number of islands in a grid using depth-first search.
 class Solution:
   def numIslands(self, grid: List[List[str]]) -> int:
