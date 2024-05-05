@@ -1,3 +1,12 @@
+"""
+Author: Aarya
+Description: Write a function that takes the binary representation of a positive integer 
+  and returns the number of set bits it has (also known as the Hamming weight).
+Time Complexity: O(1), The given number is going to take 32 bits. 
+  So in the worst case, the algorithm will only perform 32 operations which takes constant time.
+Space Complexity: O(1), the code uses an integer to keep track of number of one bits
+"""
+
 class Solution:
     def hammingWeight(self, n: int) -> int:
         count = 0
