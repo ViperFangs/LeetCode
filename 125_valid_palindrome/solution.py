@@ -3,6 +3,7 @@ Author: Aarya
 Description: A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
     Given a string s, return true if it is a palindrome, or false otherwise.
 Time Complexity: O(n), where n is the length of the str string
+Space Complexity: O(1), the solution uses a couple integers that don't grow with the input.
 """
 class Solution:
     def isPalindrome(self, s: str) -> bool:
