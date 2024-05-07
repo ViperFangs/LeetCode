@@ -4,6 +4,7 @@ Description: Given an array of strings strs, group the anagrams together. You ca
     An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, 
     typically using all the original letters exactly once.
 Time Complexity: O(m * n) where m is the number of strings and n is the average length of each string
+Space Complexity: O(n^2), in the case where every string is unique.
 """
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
