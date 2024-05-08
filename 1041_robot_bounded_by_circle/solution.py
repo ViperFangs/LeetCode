@@ -14,6 +14,7 @@ Description: On an infinite plane, a robot initially stands at (0, 0) and faces 
     The robot performs the instructions given in order, and repeats them forever.
     Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.
 Time Complexity: O(n), where n is the length of the instructions string
+Space Complexity: O(1), the algorithm utilizes a few pointers that dont grow with the input.
 """
 class Solution:
     def isRobotBounded(self, instructions: str) -> bool:
