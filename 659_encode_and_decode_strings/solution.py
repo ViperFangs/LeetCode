@@ -4,6 +4,8 @@ Description: Design an algorithm to encode a list of strings to a string. The en
     Please implement encode and decode methods
 Time Complexity: O(n) for encode, where n is the size of the list
                  O(n) for decode, where n is the length of the string
+Space Complexity: O(n) for encode, where n is the size of the list
+                  O(n) for decode, where n is the length of the string
 """
 class Solution:
     """
