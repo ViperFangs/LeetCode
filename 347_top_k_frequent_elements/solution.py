@@ -1,7 +1,9 @@
 """ 
 Author: Aarya
-Description: Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+Description: Given an integer array nums and an integer k, return the k most frequent elements. 
+    You may return the answer in any order.
 Time Complexity: O(n) where n is the size of nums
+Space Complexity: O(n), where N is the number of unique elements in the input list
 """
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
