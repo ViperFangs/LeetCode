@@ -3,7 +3,8 @@ Author: Aarya
 Description: Given two strings s and t, return true if t is an anagram of s, and false otherwise.
     An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
     typically using all the original letters exactly once.
-Time Complexity: O(s + t) or O(n)
+Time Complexity: O(s + t) or O(n) 
+Space Complexity: O(n), where n is the length of the string. The algorithm uses a hashmap that grows with the input.
 """
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
