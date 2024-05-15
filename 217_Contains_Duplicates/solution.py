@@ -4,6 +4,7 @@ Description: Given an integer array nums,
     return true if any value appears at least twice in the array,
     and return false if every element is distinct.
 Time Complexity: O(n) where n is the length of the nums list
+Space Complexity: O(n) in the case where there are no duplicates, the hashset will store all the elements.
 """
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
